@@ -12,5 +12,5 @@ This repo does not actually contains the setup scripts themselves, but acts as t
 1. Make sure you are in the directory where you want all repositories to be cloned.
 2. Open the Chrome OS Linux terminal, then copy and paste the following text to download and run the setup scripts.
 ```bash
-bash <(curl -sS https://raw.githubusercontent.com/neilgfoster/base/main/.setup/setup.sh) -o=neilgfoster -r=cros-setup
+bash <(curl -sS https://raw.githubusercontent.com/neilgfoster/cros-setup/main/.setup/setup.sh) -o=neilgfoster -r=cros-setup
 ```
