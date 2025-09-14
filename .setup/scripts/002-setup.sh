@@ -4,19 +4,20 @@
 set -e
 
 # List of repositories to install
-repos=(
+ORG=neilgfoster
+REPOS=(
   cros-development
 )
 
 # Loop through each repository and execute its setup script
-for repo in "${repos[@]}"; do
+for REPO in "${REPOS[@]}"; do
   echo
-  echo -ne "${YELLOW}Proceed with executing setup script from $repo? [Y]: ${NC}"
+  echo -ne "${YELLOW}Execute setup scripts from repository $ORG/$REPO? [Y]: ${NC}"
   read confirm < /dev/tty
   echo
   confirm=${confirm:-Y}
   if [[ ! $confirm =~ ^[Yy]$ ]]; then
     continue
   fi
-  bash <(curl -sS https://raw.githubusercontent.com/neilgfoster/${repo}/main/.setup/setup.sh) -o=neilgfoster -r=${repo}
+  bash <(curl -sS https://raw.githubusercontent.com/${ORG}/${REPO}/main/.setup/setup.sh) -o=${ORG} -r=${REPO}
 done
