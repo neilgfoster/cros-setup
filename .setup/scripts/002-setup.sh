@@ -7,6 +7,7 @@ set -e
 ORG=neilgfoster
 REPOS=(
   cros-development
+  cros-productivity
 )
 
 # Loop through each repository and execute its setup script

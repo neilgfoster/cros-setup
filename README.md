@@ -23,6 +23,7 @@ These repositories contain the actual setup scripts and configurations that are 
 - [base](https://github.com/neilgfoster/base): Common setup scripts and configurations.
 - [cros-base](https://github.com/neilgfoster/cros-base): Template for new ChromeOS setup repositories.
 - [cros-development](https://github.com/neilgfoster/cros-development): Development environment setup scripts for ChromeOS.
+- [cros-productivity](https://github.com/neilgfoster/cros-productivity): Productivity tools and configurations for ChromeOS.
 
 ## Setup Flow
 
