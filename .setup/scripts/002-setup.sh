@@ -13,7 +13,8 @@ REPOS=(
 # Loop through each repository and execute its setup script
 for REPO in "${REPOS[@]}"; do
   echo
-  echo -ne "${YELLOW}Execute setup scripts from repository $ORG/$REPO? [Y]: ${NC}"
+  echo -e "${YELLOW}Switching context to the Repository: https://github.com/$ORG/$REPO${NC}"
+  echo -ne "${YELLOW}Execute setup scripts from this repository? [Y]: ${NC}"
   read confirm < /dev/tty
   echo
   confirm=${confirm:-Y}
