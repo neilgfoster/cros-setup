@@ -22,6 +22,7 @@ This repository orchestrates the setup of a ChromeOS Linux (Crostini) environmen
 These repositories contain additional setup scripts and configurations that may be pulled in and executed:
 - [cros-development](https://github.com/neilgfoster/cros-development): Development environment setup scripts for ChromeOS.
 - [cros-productivity](https://github.com/neilgfoster/cros-productivity): Productivity tools and configurations for ChromeOS.
+- [cros-android](https://github.com/neilgfoster/cros-android): Android development environment setup scripts for ChromeOS.
 
 ## Setup Flow
 

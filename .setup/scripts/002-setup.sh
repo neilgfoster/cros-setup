@@ -8,6 +8,7 @@ ORG=neilgfoster
 REPOS=(
   cros-development
   cros-productivity
+  cros-android
 )
 
 # Loop through each repository and execute its setup script
