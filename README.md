@@ -12,9 +12,8 @@ This repository orchestrates the setup of a ChromeOS Linux (Crostini) environmen
 
 - `.setup/setup.sh`: Main setup script. Handles argument parsing, environment checks, and orchestrates the setup process. It executes all numbered scripts in `.setup/scripts/` in order.
 - `.setup/scripts/000-init.sh`: Installs essential packages (git, git-lfs), initializes git configuration, and sets up global user details.
-- `.setup/scripts/001-flatpak.sh`: Installs Flatpak and adds the Flathub repository for app management.
-- `.setup/scripts/002-gtk-dark-mode.sh`: Optionally applies a dark theme to GTK apps for improved UI consistency.
-- `.setup/scripts/003-setup.sh`: Prompts for and executes setup scripts from referenced repositories (e.g., `cros-development`, `cros-productivity`, `cros-android`).
+- `.setup/scripts/001-gtk-dark-mode.sh`: Optionally applies a dark theme to GTK apps for improved UI consistency (uses Adwaita-dark theme).
+- `.setup/scripts/002-setup.sh`: Prompts for and executes setup scripts from referenced repositories (e.g., `cros-development`, `cros-productivity`, `cros-android`).
 - `.github/CODEOWNERS`: Declares repository ownership for GitHub automation.
 
 > **Note:** There is currently no `.setup/scripts/999-finalise.sh` in this repository.
@@ -30,9 +29,8 @@ These repositories contain additional setup scripts and configurations that may 
 ## Setup Flow
 
 1. **Initialization**: Installs essential tools and configures git (via `000-init.sh`).
-2. **Flatpak Setup**: Installs Flatpak and adds Flathub (via `001-flatpak.sh`).
-3. **Optional UI Tweak**: Prompts to apply a dark GTK theme (via `002-gtk-dark-mode.sh`).
-4. **Repository Setup**: Prompts to run setup scripts from referenced repositories, which are fetched and executed automatically (via `003-setup.sh`).
+2. **Optional UI Tweak**: Prompts to apply a dark GTK theme (via `001-gtk-dark-mode.sh`).
+3. **Repository Setup**: Prompts to run setup scripts from referenced repositories, which are fetched and executed automatically (via `002-setup.sh`).
 
 
 ## Getting Started
@@ -45,7 +43,7 @@ bash <(curl -sS https://raw.githubusercontent.com/neilgfoster/cros-setup/main/.s
 ```
 
 
-Follow the prompts to complete your environment setup. You may be asked to confirm actions or provide information (e.g., git username/email). You will also be prompted to run setup scripts from referenced repositories. Flatpak and Flathub will be installed as part of the process.
+Follow the prompts to complete your environment setup. You may be asked to confirm actions or provide information (e.g., git username/email). You will also be prompted to run setup scripts from referenced repositories. The GTK dark mode option uses the Adwaita-dark theme.
 
 ## Notes
 
